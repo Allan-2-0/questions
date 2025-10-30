@@ -1,42 +1,43 @@
-import random
+#question 1
+for x in range(4):
+	print("*" * 9)   
+  #2
+print("***********")
+print("*         *")
+print("*         *")
+print("***********")
+#q3
+for x in range(4):
+    print("*" *x )
+  #q4
+  num = 512 
+num2 =282
+num4 = 47.48
+num5 = 5
+tol = num-num2
+to = num4 + 5
+total = tol/to
+print (total)
+#q5
+import math 
 
-def get_user_choice():
-    choice = input('enter rock , paper or scissors')
-    if choice in ('rock' ,'paper', 'scissors'):
-        return choice
-    else:
-        print ('invalid choice')
-        return  get_user_choice()                             
-    
+num = int(input("Enter a number: "))
+kill = pow(num,2)
+print(f"the square of {num} is {kill}")
+#q6
+num = int(input("Enter number"))
+for x in range(num,10):
+    print(x  ,x*2 ,x*3 ,x*4,end= "--")
+  #q7
+weight = float(input("Enter the pounds to be converted to killograms"))
+total = weight * 2.2
+print(f"your killograms is {total:02}")
+#q8
+num = float(input("Enter the fist number: " ))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("enter the third number: "))
 
-def get_computer_choice():
-    return random.choice (['rock','paper','scissors'])
-
-def determine_winner(user,computer):
-    if user == computer:
-        return 'its a tie'
-    elif ({user == 'rock' and computer == 'scissors'}or\
-       {user == 'scissors'and computer == 'paper'}or\
-       {user == 'paper'and computer == 'rock'}):
-        return "you win"
-
-    else:
-        return 'computer wins'
-    
-def play_game():
-    print ('welcome to the game')
-    while True:
-        user_choice = get_user_choice()
-        computer_choice = get_computer_choice()
-        print(f"\nYou chose: {user_choice}")
-        print(f"Computer chose: {computer_choice}")
-        result = determine_winner(user_choice,computer_choice)
-        print(f'\n result {result}')
-        play_again = input("\nPlay again? (yes/no): ").strip().lower()
-        if play_again != 'yes':
-            print("Thanks for playing!")
-            break
-
-# Run the game
-if __name__ == "__main__":
-    play_game()
+totall = num + num2 + num3
+avarage = totall/3
+print(f"the total of the sum is {totall} and the avarage is {avarage}")
+  
